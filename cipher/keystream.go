@@ -1,12 +1,12 @@
 /*
-    QuarkDash Keystream Implementation
+QuarkDash Keystream Implementation
 
-    @git             https://github.com/devsdaddy/quarkdash-go
-    @version         1.2.1
-    @author          Elijah Rastorguev
-    @build           1023
-    @website         https://dev.to/devsdaddy
-    @updated         28.08.2026
+@git             https://github.com/devsdaddy/quarkdash-go
+@version         1.2.1
+@author          Elijah Rastorguev
+@build           1023
+@website         https://dev.to/devsdaddy
+@updated         28.08.2026
 */
 package cipher
 
@@ -31,7 +31,7 @@ type Keystream interface {
 // Generates blocks by request using gen function
 type lazyKeystream struct {
 	blockSize    int
-	position     int                            // pointer for Read/XorRead
+	position     int // pointer for Read/XorRead
 	cachedBlocks map[int][]byte
 	maxCache     int
 	gen          func(blockIndex int) []byte

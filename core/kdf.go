@@ -1,12 +1,12 @@
 /*
-    QuarkDash KDF Implementation
+QuarkDash KDF Implementation
 
-    @git             https://github.com/devsdaddy/quarkdash-go
-    @version         1.2.1
-    @author          Elijah Rastorguev
-    @build           1023
-    @website         https://dev.to/devsdaddy
-    @updated         28.08.2026
+@git             https://github.com/devsdaddy/quarkdash-go
+@version         1.2.1
+@author          Elijah Rastorguev
+@build           1023
+@website         https://dev.to/devsdaddy
+@updated         28.08.2026
 */
 package core
 
@@ -19,15 +19,15 @@ type KDF interface {
 }
 
 /*
-    QuarkDash KDF Implementation based on SHAKE256
-    Algorythm:
-    1) PRK = SHAKE256(salt||IKM, 64)
-    2) HKDF-Expand with info and counter
+QuarkDash KDF Implementation based on SHAKE256
+Algorythm:
+1) PRK = SHAKE256(salt||IKM, 64)
+2) HKDF-Expand with info and counter
 */
 type QuarkDashKDF struct{}
 
 /*
-    Derive Method compute HKDF-Expand with SHAKE256
+Derive Method compute HKDF-Expand with SHAKE256
 */
 func (k *QuarkDashKDF) Derive(ikm, salt, info []byte, length int) []byte {
 	// PRK pseudo-random key from salt and IKM

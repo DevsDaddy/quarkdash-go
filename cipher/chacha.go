@@ -1,12 +1,12 @@
 /*
-    QuarkDash ChaCha20 Implementation
+QuarkDash ChaCha20 Implementation
 
-    @git             https://github.com/devsdaddy/quarkdash-go
-    @version         1.2.1
-    @author          Elijah Rastorguev
-    @build           1023
-    @website         https://dev.to/devsdaddy
-    @updated         28.08.2026
+@git             https://github.com/devsdaddy/quarkdash-go
+@version         1.2.1
+@author          Elijah Rastorguev
+@build           1023
+@website         https://dev.to/devsdaddy
+@updated         28.08.2026
 */
 package cipher
 

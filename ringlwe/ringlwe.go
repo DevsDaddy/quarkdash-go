@@ -1,12 +1,12 @@
 /*
-    QuarkDash Key Ring-LWE Implementation
+QuarkDash Key Ring-LWE Implementation
 
-    @git             https://github.com/devsdaddy/quarkdash-go
-    @version         1.2.1
-    @author          Elijah Rastorguev
-    @build           1023
-    @website         https://dev.to/devsdaddy
-    @updated         28.08.2026
+@git             https://github.com/devsdaddy/quarkdash-go
+@version         1.2.1
+@author          Elijah Rastorguev
+@build           1023
+@website         https://dev.to/devsdaddy
+@updated         28.08.2026
 */
 package ringlwe
 
@@ -531,7 +531,7 @@ func (b *BaseRingLWE) Decapsulate(privKey, peerPubKey, ciphertext []byte) ([]byt
 	return b.hashSharedSecret(rawSecret, peerPubKey, ciphertext), nil
 }
 
-func (b *BaseRingLWE) ValidatePublicKey(pk []byte) error { return b.validatePublicKey(pk) }
+func (b *BaseRingLWE) ValidatePublicKey(pk []byte) error  { return b.validatePublicKey(pk) }
 func (b *BaseRingLWE) ValidateCiphertext(ct []byte) error { return b.validateCiphertext(ct) }
 
 type RingLWE struct{ *BaseRingLWE }

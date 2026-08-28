@@ -1,12 +1,12 @@
 /*
-    QuarkDash MAC Implementation
+QuarkDash MAC Implementation
 
-    @git             https://github.com/devsdaddy/quarkdash-go
-    @version         1.2.1
-    @author          Elijah Rastorguev
-    @build           1023
-    @website         https://dev.to/devsdaddy
-    @updated         28.08.2026
+@git             https://github.com/devsdaddy/quarkdash-go
+@version         1.2.1
+@author          Elijah Rastorguev
+@build           1023
+@website         https://dev.to/devsdaddy
+@updated         28.08.2026
 */
 package core
 
@@ -21,9 +21,9 @@ type MAC interface {
 }
 
 /*
-    QuarkDash MAC uses SHAKE256(key||data) -> 32B tag
-    In this implementation we use reusable buffer for SignTwo
-    to avoid allocations at hot way
+QuarkDash MAC uses SHAKE256(key||data) -> 32B tag
+In this implementation we use reusable buffer for SignTwo
+to avoid allocations at hot way
 */
 type QuarkDashMAC struct {
 	buf []byte // Reusable buffer up to 64KB
